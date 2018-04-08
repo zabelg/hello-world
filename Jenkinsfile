@@ -1,10 +1,5 @@
-pipeline {
-    agent { docker { image 'maven:3.5.3' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'mvn --version'
-            }
-        }
-    }
+node {
+  git url: 'https://github.com/zabelg/hello-world/demo'
+  def mvnHome = tool 'M3'
+  sh "${mvnHome}/bin/mvn -B verify"
 }
