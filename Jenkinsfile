@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -f demo -B -DskipTests clean package'
+                sh '/usr/local/Cellar/maven/3.5.3/bin/mvn -f demo -B -DskipTests clean package'
             }
         }
         stage('Test') {
             steps {
-                sh 'mvn -f demo test'
+                sh '/usr/local/Cellar/maven/3.5.3/bin/mvn -f demo test'
             }
             post {
                 always {
