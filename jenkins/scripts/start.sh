@@ -1,2 +1,2 @@
 #!/bin/bash
-java -jar myapp.jar & echo $! > ./pid.file &
+java -jar ../../target/demo-0.0.1-SNAPSHOT.jar & echo $! > ./pid.file &
