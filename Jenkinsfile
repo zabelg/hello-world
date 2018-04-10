@@ -18,7 +18,8 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                sh '/usr/local/Cellar/maven/3.5.3/bin/mvn -f demo spring-boot:stop'
+                sh '/usr/local/Cellar/maven/3.5.3/bin/mvn -f demo spring-boot:start'
             }
         }
     }
