@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                sh 'java -jar demo/target/demo-0.0.1-SNAPSHOT.jar > ./log.txt 2>&1 &'
             }
         }
     }
