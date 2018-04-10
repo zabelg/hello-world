@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo ### Stopping Demo Application
+echo '### Stopping Demo Application'
 kill $(cat ./pid.file)
